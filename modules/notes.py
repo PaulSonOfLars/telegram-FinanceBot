@@ -24,7 +24,7 @@ def save_note(bot, update, args):
         del args[0]
         note_data = " ".join(args)
         notes[chat_id][notename] = note_data
-        print("Added new note \"" + notename + "\" with content \"" \
+        update.message.reply_text("Added new note \"" + notename + "\" with content \"" \
                 + note_data + "\".")
     else:
         update.message.reply_text(strings.errBadFormat)
